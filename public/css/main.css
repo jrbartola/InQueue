@@ -8,4 +8,11 @@ nav {
   background-repeat: no-repeat;
   background-size: cover; }
 
+.crowd-inner {
+  width: 50%;
+  margin: auto;
+  height: 50%;
+  line-height: 250px;
+  text-align: center; }
+
 /*# sourceMappingURL=main.css.map */

@@ -3,6 +3,7 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/css/materialize.min.css' />
+    <link rel='stylesheet' href='/css/sweetalert2.min.css' />
     <link rel='stylesheet' href='/css/main.css' />
   </head>
   <body>
@@ -16,11 +17,32 @@
       </ul>
     </div>
   	</nav>
-
+  	<!-- Main picture display -->
   	<div class="row" id="bgcrowd">
-
+  	  <div class="crowd-inner">
+  	  	<a id="login" class="waves-effect waves-light btn login-btn">Login</a><br/>
+  	  	<a id="reg" class="waves-effect waves-light btn register-btn">Register</a>
+  	  </div>
     </div>
+    
+    <nav>
+    <div class="nav-wrapper bottom">
+      <ul class="right">
+        <li>Copyright 2017 Jesse Bartola</li>
+      </ul>
+    </div>
+  	</nav>
+  
+  <!-- Load jQuery first -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+  <!-- Promises, etc. -->
+  <script src="/js/core.js" ></script>
 
+  <!-- SweetAlert2 modal plugin -->
+  <script src="/js/sweetalert2.min.js"></script>
+
+  <!-- Custom jQuery scripts for this page -->
+  <script src="/js/index.js"></script>
   </body>
 </html>
