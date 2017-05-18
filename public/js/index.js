@@ -25,7 +25,19 @@ $('.login-btn').on('click', function() {
       $('#swal-login').focus()
     }
   }).then(function (result) {
-    swal(JSON.stringify(result))
+  	if (!validateEmail(result[0])) {
+      swal({
+      	title: 'Uh oh!',
+      	text: 'Incorrect email/password combination',
+      	type: 'error'
+      });
+  	} else {
+    
+    // Send login data to authentication API...
+
+	}
+    
+    //swal(JSON.stringify(result))
   }).catch(swal.noop)
   
 });
