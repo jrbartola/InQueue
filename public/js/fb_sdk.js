@@ -6,12 +6,9 @@ window.fbAsyncInit = function() {
     version    : 'v2.8'
   });
   FB.AppEvents.logPageView();
-
+  FB.Event.subscribe('xfbml.render', finished_rendering);
   // Check login status of current user's facebook
-  FB.getLoginStatus(function(response) {
-    console.log(response);
-    //FB.login();
-  });
+  checkLoginState();
 };
 
 (function(d, s, id){
@@ -22,10 +19,13 @@ window.fbAsyncInit = function() {
    fjs.parentNode.insertBefore(js, fjs);
  }(document, 'script', 'facebook-jssdk'));
 
-// (function(d, s, id) {
-//   var js, fjs = d.getElementsByTagName(s)[0];
-//   if (d.getElementById(id)) return;
-//   js = d.createElement(s); js.id = id;
-//   js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9&appId=655501524640528";
-//   fjs.parentNode.insertBefore(js, fjs);
-// }(document, 'script', 'facebook-jssdk'));
+function checkLoginState() {
+  FB.getLoginStatus(function(response) {
+    console.log("Reponse from facebook login authentication is...");
+    if (response.status === 'connected') {
+      console.log(response.authResponse.accessToken);
+      // Redirect to main screen from here...
+    }
+    console.log(response);
+  });
+}
