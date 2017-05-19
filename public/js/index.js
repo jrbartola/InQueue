@@ -9,7 +9,7 @@ $('.login-btn').on('click', function() {
   swal({
     title: 'Enter the party!',
     html:
-      '<span style="display:block;text-align:left;">Login</span>' +
+      '<span style="display:block;text-align:left;">Email</span>' +
       '<input id="swal-login" type="email" class="swal2-input">' +
       '<span style="display:block;text-align:left;">Password</span>' +
       '<input id="swal-password" type="password" class="swal2-input">',

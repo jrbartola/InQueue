@@ -2,32 +2,39 @@
 <html>
   <head>
     <title><%= title %></title>
+    <link rel='stylesheet' href='/css/icon.min.css' />
     <link rel='stylesheet' href='/css/materialize.min.css' />
     <link rel='stylesheet' href='/css/sweetalert2.min.css' />
     <link rel='stylesheet' href='/css/main.css' />
   </head>
   <body>
+
+    <!-- Initialize Facebook SDK -->
+    <script src="/js/fb_sdk.js"></script>
+
     <nav>
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo">InQueue</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <a href="#" class="brand-logo left"><i class="music icon"></i></a>
+      <a href="#" class="brand-logo center">InQueue</a>
+      <!-- <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="sass.html">Sass</a></li>
         <li><a href="badges.html">Components</a></li>
         <li><a href="collapsible.html">JavaScript</a></li>
-      </ul>
+      </ul> -->
     </div>
   	</nav>
   	<!-- Main picture display -->
   	<div class="row" id="bgcrowd">
   	  <div class="crowd-inner">
-  	  	<a id="login" class="waves-effect waves-light btn login-btn">Login</a><br/>
-  	  	<a id="reg" class="waves-effect waves-light btn register-btn">Register</a>
+  	  	<!-- <a id="login" class="waves-effect waves-light btn login-btn">Login</a><br/> -->
+        <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
+  	  	<!-- <a id="reg" class="waves-effect waves-light btn register-btn">Register</a> -->
   	  </div>
     </div>
     
     <nav>
     <div class="nav-wrapper bottom">
-      <ul class="right">
+      <ul class="right" style="width: 90%">
         <li>Copyright 2017 Jesse Bartola</li>
       </ul>
     </div>

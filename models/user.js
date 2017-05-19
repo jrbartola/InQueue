@@ -11,17 +11,18 @@
 var userSchema = new mongoose.Schema({
     email: {
         type: String,
+        required: true,
         unique: true
     },
-    username: {
+    password : {
         type: String,
-        unique: true
+        required: true
     },
-    password : String,
-    description : String,
-    causes : [],
-    location : {
-        country: String,
-        city: String
+    num_logins : {
+        type: Number,
+        default: 0
     }
+    facebook_id: Number
 });
+
+mongoose.model('user', userSchema, 'user');
