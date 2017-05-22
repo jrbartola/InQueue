@@ -14,7 +14,8 @@ router.post('/create', makeSession);
 router.get('/get/:_id', getSessionById);
 router.get('/get/code/:code', getSessionByCode);
 router.put('/update/:_id', updateSessionById);
-router.delete('/delete/code/:code', deleteSession);
+router.put('/update/code/:code', updateSessionByCode);
+router.delete('/delete/code/:code', deleteSessionByCode);
 
 module.exports = router;
 
@@ -25,7 +26,10 @@ function makeSession(req, res){
     var newSession = new sessionSchema();
     newSession.title = req.body.title;
     newSession.host_id = req.body.host_id;
+
+    // Generate our 6-character session registration code
     newSession.code = gen.generateSessionCode();
+
     databaseCall.saveQuery(newSession).then(function (result) {
         res.json(result);
     }).catch(function (err) {
@@ -76,11 +80,11 @@ function updateSessionById(req, res){
 }
 
 /**
- * Update Session by FacebookID PUT route
+ * Update Session by registration code
  */
-function updateSessionById(req, res){
+function updateSessionByCode(req, res){
     var object = {};
-    object['_id'] = mongoose.Types.ObjectId(req.params._id);
+    object['code'] = req.params.code;
     databaseCall.findOneQuery(sessionSchema, object).then(function (response){
         if (response.success) {
             var updatedSession = req.body;
@@ -94,9 +98,9 @@ function updateSessionById(req, res){
 }
 
 /**
- * Delete Session by ObjectID
+ * Delete Session by registration code
  */
-function deleteSession(req, res) {
+function deleteSessionByCode(req, res) {
     var object = {};
     object['code'] = req.params.code;
     databaseCall.deleteQuery(sessionSchema, object).then(function (response) {

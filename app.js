@@ -10,13 +10,13 @@ var expressValidator = require('express-validator');
 var fs = require('fs');
 
 require('./models/user');
-// require('./models/category');
+require('./models/session');
 // require('./models/event');
 // require('./models/organization');
 
 var index = require('./routes/index');
 var user = require('./routes/user');
-// var category = require('./routes/category');
+var session = require('./routes/session');
 // var event = require('./routes/event');
 // var org = require('./routes/organization');
 
@@ -59,9 +59,9 @@ app.use(expressValidator({
 
 app.use('/', index);
 app.use('/api/user', user);
-// app.use('/api/category', category);
+app.use('/api/session', session);
 // app.use('/api/event', event);
-// app.use('/api/or g', org);
+// app.use('/api/org', org);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -14,3 +14,5 @@ var generateSessionCode = function() {
 
     return text;
 }
+
+exports.generateSessionCode = generateSessionCode;
