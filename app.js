@@ -9,16 +9,17 @@ var mongoose = require('mongoose');
 var expressValidator = require('express-validator');
 var fs = require('fs');
 
-// require('./models/attendee');
+require('./models/user');
 // require('./models/category');
 // require('./models/event');
 // require('./models/organization');
 
-// var attendee = require('./routes/attendee');
+var index = require('./routes/index');
+var user = require('./routes/user');
 // var category = require('./routes/category');
 // var event = require('./routes/event');
 // var org = require('./routes/organization');
-var index = require('./routes/index');
+
 
 var app = express();
 
@@ -57,7 +58,7 @@ app.use(expressValidator({
 }));
 
 app.use('/', index);
-// app.use('/api/attendee', attendee);
+app.use('/api/user', user);
 // app.use('/api/category', category);
 // app.use('/api/event', event);
 // app.use('/api/or g', org);

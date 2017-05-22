@@ -11,8 +11,9 @@ var userSchema = mongoose.model('user');
 // API Routes
 router.post('/create', makeUser);
 router.get('/get/:fb_id', getUserByFacebookId);
-router.put('/update/:id', updateUserByFacebookId);
-router.delete('/delete/:id', deleteUser);
+router.put('/update/:fb_id', updateUserByFacebookId);
+route.put('/upsert/:fb_id', upsertUserByFacebookId);
+router.delete('/delete/:fb_id', deleteUser);
 
 module.exports = router;
 
@@ -65,7 +66,7 @@ function updateUserByFacebookId(req, res){
 function upsertUserByFacebookId(req, res) {
     var object = {};
     object['facebook_id'] = req.params.fb_id;
-    
+
     // This may be null if no additional fields are provided (name, location, etc.)
     var updatedUser = req.body;
     updatedUser.last_login = Date.now();
