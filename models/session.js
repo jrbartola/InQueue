@@ -8,8 +8,8 @@ var mongoose = require('mongoose');
 var sessionSchema = new mongoose.Schema({
     title: String,
     // Foreign key referencing User schema
-    host: {
-    	type: Schema.Types.ObjectId,
+    host_id: {
+    	type: String,
     	required: true
     },
     time: {

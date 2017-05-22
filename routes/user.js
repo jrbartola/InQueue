@@ -48,7 +48,7 @@ function getUserByFacebookId(req, res) {
 function updateUserByFacebookId(req, res){
     var object = {};
     object['facebook_id'] = req.params.fb_id;
-    databaseCall.findOneQuery(eventSchema, object).then(function (response){
+    databaseCall.findOneQuery(userSchema, object).then(function (response){
         if (response.success) {
             var updatedUser = req.body;
             databaseCall.updateQuery(userSchema, object, updatedUser, false).then(function (response) {
