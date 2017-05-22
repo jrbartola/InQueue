@@ -90,15 +90,15 @@ var saveQuery = function(objectToSave) {
  *
  * @param objectToUpdate - model to update
  * @param query - query to be used
- * @param updatedObject - update model
- * @param upsert - create new on update
+ * @param fieldsToUpdate - field we intend to update in our new object
+ * @param upsert - create new on update it not exists
  * @returns {*|promise} - promise with saved data
  */
-var updateQuery = function(objectToUpdate, query, updatedObject, upsert) {
+var updateQuery = function(objectToUpdate, query, fieldsToUpdate, upsert) {
     var deferred = q.defer();
     var object = {};
 
-    objectToUpdate.update(query, updatedObject, { upsert: upsert },  function(err, data) {
+    objectToUpdate.update(query, fieldsToUpdate, { upsert: upsert },  function(err, data) {
         if (err) {
             object.success = false;
             object.errorMessage = err;

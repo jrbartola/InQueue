@@ -80,8 +80,4 @@ app.use(function(err, req, res) {
   res.render('error');
 });
 
-// function readMongoEnv() {
-//     return JSON.parse(fs.readFileSync('env/mongo.json', 'utf8'));
-// }
-
 module.exports = app;
