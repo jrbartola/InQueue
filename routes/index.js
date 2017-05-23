@@ -6,8 +6,4 @@ router.get('/', function(req, res) {
   res.render('index', { title: 'InQueue'});
 });
 
-router.post('/register', function(req, res) {
-
-});
-
 module.exports = router;
