@@ -12,7 +12,7 @@ var userSchema = mongoose.model('user');
 router.post('/create', makeUser);
 router.get('/get/:fb_id', getUserByFacebookId);
 router.put('/update/:fb_id', updateUserByFacebookId);
-route.put('/upsert/:fb_id', upsertUserByFacebookId);
+router.put('/upsert/:fb_id', upsertUserByFacebookId);
 router.delete('/delete/:fb_id', deleteUser);
 
 module.exports = router;

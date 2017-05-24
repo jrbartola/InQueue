@@ -1,7 +1,7 @@
 /**
  * Database call abstractions
  */
-var messages = require('../utility/messages').messages;
+var messages = require('../util/messages').messages;
 var httpStatus = require('http-status-codes');
 var q = require('q');
 
