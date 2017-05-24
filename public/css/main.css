@@ -15,4 +15,20 @@ nav {
   line-height: 250px;
   text-align: center; }
 
+.side-nav {
+  width: 100px; }
+
+i.medium {
+  font-size: 3rem; }
+
+/* Side-Nav Styles */
+.side-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; }
+
+.nav-icon {
+  text-align: center;
+  /*flex-basis: auto;*/ }
+
 /*# sourceMappingURL=main.css.map */

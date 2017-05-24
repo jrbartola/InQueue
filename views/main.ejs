@@ -2,7 +2,8 @@
 <html>
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/css/icon.min.css' />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- <link rel='stylesheet' href='/css/icon.min.css' /> -->
     <link rel='stylesheet' href='/css/materialize.min.css' />
     <link rel='stylesheet' href='/css/sweetalert2.min.css' />
     <link rel='stylesheet' href='/css/main.css' />
@@ -10,28 +11,46 @@
   <body>
 
   <!-- Initialize Facebook SDK -->
-  <script src="/js/fb_sdk.js"></script>
+  <!-- <script src="/js/fb_sdk.js"></script> -->
   
   <!-- React JSX Scripts -->
   <script src="/react/main.jsx"></script>
 
 
-  <ul id="slide-out" class="side-nav">
-    <li><div class="userView">
-      <div class="background">
-        <img src="images/office.jpg">
-      </div>
-      <a href="#!user"><img class="circle" src="images/yuna.jpg"></a>
-      <a href="#!name"><span class="white-text name">John Doe</span></a>
-      <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
-    </div></li>
-    <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-    <li><a href="#!">Second Link</a></li>
-    <li><div class="divider"></div></li>
-    <li><a class="subheader">Subheader</a></li>
-    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
-  </ul>
-  
+  <div id="slide-out" class="side-nav">
+    <div class="nav-icon">
+      <a href="#" title="Create a session">
+        <i class="medium material-icons">create</i>
+      </a>
+    </div>
+
+    <div class="nav-icon">
+      <a href="#" title="Join a session">
+        <i class="medium material-icons">people</i>
+      </a>
+    </div>
+
+    <div class="nav-icon">
+      <a href="#" title="Leave this session">
+        <i class="medium material-icons">brightness_3</i>
+      </a>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="nav-icon">
+      <a href="#" title="Your profile">
+        <i class="medium material-icons">person</i>
+      </a>
+    </div>
+
+    <div class="nav-icon">
+      <a href="#" title="Log out">
+        <i class="medium material-icons">power_settings_new</i>
+      </a>
+    </div>
+  </div>
+
   <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
 
   <div class="row" id="maindiv">
@@ -40,6 +59,9 @@
   
   <!-- Load jQuery first -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  
+  <!-- Materialize css functionality -->
+  <script src="/js/materialize.min.js"></script>
   
   <!-- React.js -->
   <script src="/js/react.min.js"></script>
@@ -57,6 +79,6 @@
   <script src="/js/main.js"></script>
 
   <!-- jQuery utility functions -->
-  <script src="/js/main_util.js"></script>
+  <!--<script src="/js/main_util.js"></script> -->
   </body>
 </html>

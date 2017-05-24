@@ -23,7 +23,7 @@ function checkLoginState() {
   FB.getLoginStatus(function(response) {
     console.log("Reponse from facebook login authentication is...");
     if (response.status === 'connected') {
-      console.log(response.authResponse.accessToken);
+      //console.log(response.authResponse.accessToken);
       // Redirect to main screen from here...
     }
     console.log(response);
@@ -31,7 +31,7 @@ function checkLoginState() {
 }
 
 var finished_rendering = function() {
-  console.log("finished rendering plugins");
+  //console.log("finished rendering plugins");
   var spinner = document.getElementById("spinner");
   spinner.removeAttribute("style");
   spinner.removeChild(spinner.childNodes[0]);
