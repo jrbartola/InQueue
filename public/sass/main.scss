@@ -38,3 +38,25 @@ i.medium {
 	text-align: center;
 	/*flex-basis: auto;*/
 }
+
+/* Playbar Styles */
+
+.playbar {
+	position: fixed;
+	bottom: 0;
+}
+
+.play-info {
+	text-align: center;
+}
+
+.progress {
+	margin-top: 30px;
+}
+
+.play-vote {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+

@@ -16,7 +16,7 @@
   <!-- React JSX Scripts -->
   <script src="/react/main.jsx"></script>
 
-
+  <!-- Side Nav -->
   <div id="slide-out" class="side-nav">
     <div class="nav-icon">
       <a href="#" title="Create a session">
@@ -50,11 +50,42 @@
       </a>
     </div>
   </div>
-
+  <!-- End Side Nav -->
+  
+  <!-- Temporary Side Nav Activation Button -->
   <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
 
   <div class="row" id="maindiv">
-    <!-- Play progress bar section -->
+
+    <!-- Fixed Nav- playbar -->
+    <div class="navbar-fixed playbar">
+    <nav>
+      <div class="nav-wrapper">
+        <!-- <a href="#!" class="brand-logo">Logo</a> -->
+        <div class="play-info col s2">
+          <!-- Pause/Play button- delegate this functionality to react -->
+          <div>
+          <a href="#" title="Pause">
+            <i class="medium material-icons">pause</i>
+          </a>
+          </div>
+        </div>
+        <div class="progress col s8">
+          <div class="determinate" ></div>
+        </div>
+
+        <div class="play-vote col s2">
+          <a href="#" title="Like">
+            <i class="medium material-icons">thumb_up</i>
+          </a>
+          <a href="#" title="Dislike">
+            <i class="medium material-icons">thumb_down</i>
+          </a>
+        </div>
+
+      </div>
+    </nav>
+    </div>
   </div>
   
   <!-- Load jQuery first -->
