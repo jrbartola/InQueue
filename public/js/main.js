@@ -3,4 +3,4 @@
  */
 
 // Initialize sidebar nav
-$(".button-collapse").sideNav();
+$(".button-collapses").sideNav();

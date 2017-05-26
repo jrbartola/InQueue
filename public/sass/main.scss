@@ -47,7 +47,10 @@ i.medium {
 }
 
 .play-info {
-	text-align: center;
+	/* text-align: center; */
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
 }
 
 .progress {
