@@ -50,4 +50,15 @@ i.medium {
   flex-direction: row;
   justify-content: space-around; }
 
+.tabs-subset {
+  height: 64px; }
+  .tabs-subset .tab {
+    line-height: 64px; }
+    .tabs-subset .tab a, .tabs-subset .tab a.active, .tabs-subset .tab a:hover {
+      color: #3737ff;
+      font-size: 1.5rem; }
+  .tabs-subset .indicator {
+    /*color: rgba(55, 55, 255, 1);*/
+    background-color: #3737ff; }
+
 /*# sourceMappingURL=main.css.map */
