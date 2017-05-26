@@ -63,8 +63,15 @@ i.medium {
     /*background-color: rgba(55, 55, 255, 1);*/
     background-color: white; }
 
+.queueitem {
+  border-bottom: 1px solid #AAAAAA; }
+  .queueitem .row {
+    margin-bottom: 0px; }
+    .queueitem .row .queue-picture {
+      padding: 0.75rem; }
+
 #queuelist {
   background-color: #e6e6e6;
-  box-shadow: 0px 3px 3px #888888; }
+  box-shadow: 0px 2px 2px #888888; }
 
 /*# sourceMappingURL=main.css.map */
