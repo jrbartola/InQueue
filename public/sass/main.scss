@@ -65,19 +65,27 @@ i.medium {
 
 .tabs-subset {
 	
+	background-color: rgba(55, 55, 255, 1);
+
 	height: 64px;
 
 	.tab {
 		line-height: 64px;
 
 		a, a.active, a:hover {
-			color: rgba(55, 55, 255, 1);
+			color: white;
 			font-size: 1.5rem;
 		}
 	}
 
 	.indicator {
 		/*color: rgba(55, 55, 255, 1);*/
-		background-color: rgba(55, 55, 255, 1);
+		/*background-color: rgba(55, 55, 255, 1);*/
+		background-color: white;
 	}
+}
+
+#queuelist {
+	background-color: rgb(230,230,230);
+	box-shadow: 0px 3px 3px #888888;
 }
