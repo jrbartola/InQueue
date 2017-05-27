@@ -74,4 +74,8 @@ i.medium {
   background-color: #e6e6e6;
   box-shadow: 0px 2px 2px #888888; }
 
+.thumbs {
+  display: block;
+  /*text-align: center;*/ }
+
 /*# sourceMappingURL=main.css.map */
