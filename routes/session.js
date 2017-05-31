@@ -13,6 +13,7 @@ var gen = require('../util/generate');
 router.post('/create', makeSession);
 router.get('/get/:_id', getSessionById);
 router.get('/get/code/:code', getSessionByCode);
+router.get('/get/queue/code/:code', getQueueBySessionCode);
 router.put('/update/:_id', updateSessionById);
 router.put('/update/code/:code', updateSessionByCode);
 router.delete('/delete/code/:code', deleteSessionByCode);
