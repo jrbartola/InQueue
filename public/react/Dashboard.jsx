@@ -1,5 +1,5 @@
 /**
- * Main.jsx
+ * Dashboard.jsx
  */
 
 /*** @jsx React.DOM */
@@ -15,7 +15,7 @@ var Dashboard = React.createClass({
 	},
 
 	getJSONData: function(callback) {
-		
+
 	}
 
 	render: function() {

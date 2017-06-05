@@ -9,21 +9,18 @@
  */
 
 var queueSchema = new mongoose.Schema({
-    songs: [],
-    name: {
-        first: String,
-        last: String
+    // Array of queuesong IDs
+    songs: [String],
+    _type: {
+        // Type of queue can either be next, recent, or popular
+        type: String,
+        required: true
     },
-    password: String,
-    num_logins : {
-        type: Number,
-        default: 0
-    },
-    last_login : {
-        type: Date,
-        default: Date.now
-    },
-    facebook_id: String
+    // SessionID this queue belongs to
+    session: {
+        type: String,
+        required: true
+    }
 });
 
-mongoose.model('queue', userSchema, 'queue');
+mongoose.model('queue', queueSchema, 'queue');

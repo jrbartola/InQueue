@@ -2,6 +2,12 @@ nav {
 	background-color: rgba(55, 55, 255, 1);
 }
 
+@media only screen and (min-width: 993px) {
+nav .brand-logo {
+	left: calc(50% - 55.5px);
+}
+}
+
 #bgcrowd {
 	background-image: url("../img/crowdparty.jpg");
 	width: 100%;

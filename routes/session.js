@@ -60,6 +60,12 @@ function getSessionByCode(req, res) {
     });
 }
 
+function getQueueBySessionCode(req, res) {
+    var object = {};
+    object['code'] = req.params.code;
+    databaseCall.findQuery(queueSchema)
+}
+
 /**
  * Update Session by ObjectId
  * (not quite sure what we'd want to update, but
