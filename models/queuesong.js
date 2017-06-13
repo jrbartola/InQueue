@@ -13,13 +13,22 @@ var queueSongSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    name: {
+    session: {
         type: String,
         required: true
     },
+    title: {
+        type: String,
+        required: true
+    },
+    artist: {
+        type: String,
+        required: true
+    },
+    album: String,
     time_ago: {
         type: Number,
-        default: 0
+        default: Date.now
     }
     upvotes: {
         type: Number,
