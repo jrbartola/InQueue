@@ -7,11 +7,10 @@ var mongoose = require('mongoose');
 var router = express.Router();
 var databaseCall = require('../util/databaseCalls');
 var queueSongSchema = mongoose.model('queuesong');
-var gen = require('../util/generate');
 
 // API Routes
 router.post('/create', makeQueueSong);
-router.get('/get/session/:sessionID/spotify/:spotify_id', getQueueSongBySpotifyId);
+router.get('/get/session/:sessionID/spotify/:spotify_id', getQueueSongsBySpotifyId);
 router.get('/get/session/:sessionID/artist/:artist', getQueueSongsByArtist);
 router.get('/get/session/:sessionID/title/:song_title', getQueueSongsByTitle);
 router.get('/update/session/:sessionID/spotify/:spotify_id', updateQueueSongBySpotifyId);
