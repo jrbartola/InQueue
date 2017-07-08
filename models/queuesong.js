@@ -13,10 +13,6 @@ var queueSongSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    session: {
-        type: String,
-        required: true
-    },
     title: {
         type: String,
         required: true
@@ -29,14 +25,6 @@ var queueSongSchema = new mongoose.Schema({
     time_ago: {
         type: Number,
         default: Date.now
-    }
-    upvotes: {
-        type: Number,
-        default: 0
-    },
-    downvotes: {
-        type: Number,
-        default: 0
     }
 });
 

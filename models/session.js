@@ -21,6 +21,11 @@ var sessionSchema = new mongoose.Schema({
         type: String,
         unique: true,
         required: true
+    },
+    // Queue contains an array of queueSong ID's
+    queue: {
+        type: [String],
+        required: true
     }
 });
 

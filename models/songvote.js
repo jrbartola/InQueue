@@ -9,17 +9,17 @@
  */
 
 var songVoteSchema = new mongoose.Schema({
-    // Spotify ID of the song that is being voted on
-    spotify_id: {
+    // Queuesong ID of the song that is being voted on
+    song_id: {
         type: String,
         required: true
     },
-    session: {
+    session_id: {
         type: String,
         required: true
     },
     // Some unique form of identification for our user
-    user: {
+    user_id: {
         type: String,
         required: true
     },

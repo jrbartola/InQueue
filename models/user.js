@@ -13,12 +13,8 @@ var userSchema = new mongoose.Schema({
         type: String,
         unique: true
     },
-    name: {
-        first: String,
-        last: String
-    },
     password: String,
-    num_logins : {
+    num_logins: {
         type: Number,
         default: 0
     },

@@ -1,0 +1,90 @@
+/* sample-data.json
+ *
+ * Used for storing sample data to be tested with development
+ * version of InQueue web application
+ */
+
+/* User Data */
+[{"email": "jrbartola@gmail.com",
+ "name": {
+        "first": "Jesse",
+        "last": "Bartola"
+    },
+    "password": "123pass",
+    "num_logins" : 0,
+    "last_login" : Date.now(),
+    "facebook_id": "123456789"
+},
+
+{"email": "johnsmith@gmail.com",
+ "name": {
+        "first": "John",
+ 	    "last": "Smith"
+    },
+    "password": "abcdef",
+    "num_logins": 0,
+    "last_login": Date.now(),
+    "facebook_id": "ABCDEFGHIJKL"
+}]
+
+/* Session Data */
+
+[{"title": "Graduation",
+ "host_id": "123456789",
+ "time": Date.now(),
+ "code": "ABCDEF" 
+},
+
+{"title": "Party Time",
+ "host_id": "123456789",
+ "time": Date.now(),
+ "code": "AAA123" 
+},
+
+{"title": "Light it Up",
+ "host_id": "123456789",
+ "time": Date.now(),
+ "code": "900821"
+}]
+
+/* Queue Data */
+
+[{"_id": ObjectId("1234"),
+  "songs": ["4RnfMhMUMqHlrn4V6A3KfS", "5yhXLtQL9waNMjgkl8MsMP",
+            "7EKTo6rVJ3XSS7QTd6ep2j", ],
+  "session": "ABCDEF"
+}]
+
+/* QueueSong Data */
+[{"spotify_id": "4RnfMhMUMqHlrn4V6A3KfS",
+    "queue_id": ObjectId("1234"),
+    "title": "Legend Has It",
+    "artist": "Run The Jewels",
+    "album": "Run the Jewels 3",
+    "time_ago": Date.now(),
+    "upvotes": 0,
+    "downvotes": 0
+},
+{"spotify_id": "5yhXLtQL9waNMjgkl8MsMP",
+    "queue_id": ObjectId("1234"),
+    "title": "I Don't Wanna Care Right Now - feat. MDMA",
+    "artist": "Lupe Fiasco",
+    "album": "Lasers",
+    "time_ago": Date.now(),
+    "upvotes": 0,
+    "downvotes": 0
+},
+{"spotify_id": "7EKTo6rVJ3XSS7QTd6ep2j",
+    "queue_id": ObjectId("1234"),
+    "title": "Look At Me Now",
+    "artist": "Chris Brown",
+    "album": "Look At Me Now (Explicit Version)",
+    "time_ago": Date.now(),
+    "upvotes": 0,
+    "downvotes": 0
+}]
+
+
+
+
+
